@@ -1,0 +1,49 @@
+{
+  "clusters": [
+    {
+      "id": "8c5f48826d54ee28e7ad9677b7e6fa7b61c28a5f07ef3c06e020916d4b73886b",
+      "nodes": [
+        {
+          "id": "9678cc69ea53efb0b380dd8c53b8101262ca01cda93415b985e281711bd3c16d",
+          "name": "Calculator 1",
+          "slots": [
+            {
+              "id": "9090d637d650951f8a6a0a4fc1bfdb61a08bf0a2882ad4bbd9b3155ee03eef77",
+              "type": "numeric",
+              "kind": "static",
+              "reference": "calculator",
+              "label": "Calculator block/Add values",
+              "precision": 2
+            }
+          ],
+          "block": {
+            "type": "tripetto-block-calculator",
+            "version": "1.0.0",
+            "functionType": "add",
+            "argument1": "1",
+            "argument2": "1"
+          }
+        }
+      ],
+      "branches": [
+        {
+          "id": "895b1dc889b8c00291dfbc45e1acc353b6ca6c6960e990cfebba2f4e0ae3e5e0",
+          "conditions": [
+            {
+              "id": "4d928e9ff37b3a4cd5019dfda5bdc32e8189d418363164c7b358b80a8c8081e4",
+              "block": {
+                "type": "tripetto-block-calculator",
+                "version": "1.0.0",
+                "node": "9678cc69ea53efb0b380dd8c53b8101262ca01cda93415b985e281711bd3c16d",
+                "slot": "9090d637d650951f8a6a0a4fc1bfdb61a08bf0a2882ad4bbd9b3155ee03eef77",
+                "value": 0,
+                "mode": "equal"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "editor": { "name": "tripetto", "version": "1.4.0" }
+}

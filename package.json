@@ -1,0 +1,78 @@
+{
+  "name": "tripetto-block-calculator",
+  "title": "Tripetto Block Calculator",
+  "version": "1.0.0",
+  "description": "Calculator block for the Tripetto editor.",
+  "keywords": [
+    "tripetto",
+    "tripetto block",
+    "action block",
+    "hidden field"
+  ],
+  "license": "MIT",
+  "private": true,
+  "homepage": "https://github.com/unoctanium",
+  "author": {
+    "name": "Odo Maletzki",
+    "email": "odo@maletzki.net",
+    "url": "https://github.com/unoctanium"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unoctanium/tripetto-block-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unoctanium/tripetto-block-calculator/issues"
+  },
+  "main": "dist/es5.js",
+  "browser": "dist/es5.js",
+  "module": "dist/es6.js",
+  "unpkg": "dist/umd.js",
+  "scripts": {
+    "start": "npm test",
+    "format": "prettier --write \"src/**/*.ts\" \"*.json\" \"!package-lock.json\" \"*.yml\"",
+    "lint": "tslint -c ./tslint.json ./src/**/*.ts",
+    "pot": "node ./scripts/sources.js && xgettext -f ./translations/sources --language=\"JavaScript\" --keyword=\"npgettext:1c,2,3\" --keyword=\"dnpgettext:2c,3,4\" --keyword=\"_n:1,2\" --from-code=\"UTF-8\" --no-wrap --sort-output --force-po --no-location --add-comments=\"TRANSLATOR: \" --output=\"./translations/template.pot\"",
+    "test": "webpack --mode development && concurrently -n \"tripetto,webpack\" -c \"blue.bold,green\" -k -s \"first\" \"tripetto ./test/example.json\" \"webpack --mode development --watch\"",
+    "make:clean": "shx rm -rf *.tgz ./dist ./collector",
+    "make:compile": "tsc",
+    "make:po2json": "shx rm -rf ./translations/*.json && node ./scripts/po2json.js",
+    "make": "npm run make:clean && npm run lint && npm run make:po2json && webpack --mode production",
+    "preversion": "npm run format && npm run lint && npm run make:compile && exit-on-dirty-git",
+    "postversion": "git push --follow-tags",
+    "prepack": "npm run make",
+    "prepublishOnly": "exit-on-dirty-git",
+    "publish:next": "git-branch-is next && npm version prerelease && npm publish --tag next",
+    "publish:patch": "git-branch-is master && npm version patch && npm publish",
+    "publish:minor": "git-branch-is master && npm version minor && npm publish",
+    "publish:major": "git-branch-is master && npm version major && npm publish"
+  },
+  "devDependencies": {
+    "@marblecore/tslint-configuration": "^5.12.1",
+    "concurrently": "^4.1.1",
+    "exit-on-dirty-git": "^1.0.1",
+    "git-branch-is": "^2.1.0",
+    "image-webpack-loader": "^5.0.0",
+    "po2json": "^0.4.5",
+    "prettier": "^1.18.2",
+    "shx": "^0.3.2",
+    "tripetto": "^1.4.0",
+    "tripetto-collector": "^1.5.0",
+    "ts-loader": "^6.0.4",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.3",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-livereload-plugin": "^2.2.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "tripetto": {
+    "entry": "./dist/umd.js",
+    "translations": "./translations/",
+    "blocks": [
+      "."
+    ],
+    "noFurtherLoading": true
+  }
+}

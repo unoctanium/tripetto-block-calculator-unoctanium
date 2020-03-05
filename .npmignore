@@ -1,0 +1,5 @@
+*
+!/dist/*.js
+!/collector/**/*.js
+!/collector/**/*.d.ts
+!/translations/*.json

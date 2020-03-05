@@ -1,0 +1,23 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# Common
+.git
+.hg
+.svn
+.env
+.idea
+.DS_Store
+._*
+[Tt]humbs.db
+*.log
+/.*/
+
+# Dependencies
+/node_modules
+
+# Project specific
+/dist
+/collector
+/translations/*.json
+/translations/*.mo
+*.tgz
