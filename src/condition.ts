@@ -1,8 +1,6 @@
 /** Package information retrieved from `package.json` using webpack. */
 declare const PACKAGE_NAME: string;
 declare const PACKAGE_VERSION: string;
-//const PACKAGE_NAME = "tripetto-block-calculator";
-//const PACKAGE_VERSION = "0.0.1";
 
 /** Dependencies */
 import {
