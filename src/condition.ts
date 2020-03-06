@@ -29,7 +29,6 @@ import * as ICON from "../assets/icon.svg";
     label: () => pgettext("calculator", "Verify number")
 })
 export class CalculatorCondition extends ConditionBlock {
-  
     @definition
     @affects("#name")
     value = 0;
@@ -64,24 +63,15 @@ export class CalculatorCondition extends ConditionBlock {
                     new Forms.Radiobutton<"equal" | "below" | "above">(
                         [
                             {
-                                label: pgettext(
-                                    "calculator",
-                                    "Is equal to"
-                                ),
+                                label: pgettext("calculator", "Is equal to"),
                                 value: "equal"
                             },
                             {
-                                label: pgettext(
-                                    "calculator",
-                                    "Is lower than"
-                                ),
+                                label: pgettext("calculator", "Is lower than"),
                                 value: "below"
                             },
                             {
-                                label: pgettext(
-                                    "calculator",
-                                    "Is higher than"
-                                ),
+                                label: pgettext("calculator", "Is higher than"),
                                 value: "above"
                             }
                         ],
@@ -94,5 +84,4 @@ export class CalculatorCondition extends ConditionBlock {
             });
         }
     }
-    
 }

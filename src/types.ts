@@ -53,11 +53,11 @@ export function getFunctionDescription(type: TFunctionTypes): string {
         case "average":
             return pgettext("calculator", "Calculate average.");
         case "floor":
-            return pgettext("calculator","Get lower integer value.");
+            return pgettext("calculator", "Get lower integer value.");
         case "ceil":
-            return pgettext("calculator","Get higher integer value.");
+            return pgettext("calculator", "Get higher integer value.");
         case "round":
-            return pgettext("calculator","Round value to integer.");
+            return pgettext("calculator", "Round value to integer.");
     }
 }
 export function getFunctionNumArgs(type: TFunctionTypes): number {

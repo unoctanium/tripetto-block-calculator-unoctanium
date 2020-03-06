@@ -1,2 +1,2 @@
 /** Dependencies */
-import "./calculator"; 
+import "./calculator";

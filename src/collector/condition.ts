@@ -1,6 +1,5 @@
 /** Package information retrieved from `package.json` using webpack. */
 declare const PACKAGE_NAME: string;
-//const PACKAGE_NAME = "tripetto-block-calculator";
 /** Dependencies */
 import { ConditionBlock, condition, tripetto } from "tripetto-collector";
 @tripetto({
