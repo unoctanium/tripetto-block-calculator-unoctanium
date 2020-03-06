@@ -74,5 +74,8 @@
       "."
     ],
     "noFurtherLoading": true
+  },
+  "dependencies": {
+    "es6-promise-promise": "^1.0.0"
   }
 }
