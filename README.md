@@ -51,4 +51,4 @@ For general support regarding tripetto, contact tripetto at [support@tripetto.co
 Have a blast. [MIT](https://opensource.org/licenses/MIT).
 
 # About tripetto
-If you want to learn more about Tripetto or contribute in any way, visit us at [Tripetto.com](https://tripetto.com/).
+If you want to learn more about Tripetto or contribute in any way, visit [Tripetto.com](https://tripetto.com/).
