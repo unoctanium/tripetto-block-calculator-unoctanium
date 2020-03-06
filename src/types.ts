@@ -29,9 +29,9 @@ export function getFunctionName(type: TFunctionTypes): string {
         case "average":
             return pgettext("calculator", "Get average");
         case "floor":
-            return pgettext("calculator", "Get integer");
+            return pgettext("calculator", "Get lower integer");
         case "ceil":
-            return pgettext("calculator", "Get integer");
+            return pgettext("calculator", "Get higher integer");
         case "round":
             return pgettext("calculator", "Round value");
     }
