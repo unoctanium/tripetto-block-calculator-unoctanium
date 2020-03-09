@@ -70,11 +70,9 @@ export function getFunctionNumArgs(type: TFunctionTypes): number {
         case "maximum":
         case "average":
             return 2;
-            break;
         case "floor":
         case "ceil":
         case "round":
             return 1;
-            break;
     }
 }
